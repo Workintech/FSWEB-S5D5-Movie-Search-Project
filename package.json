@@ -7,7 +7,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "jest --watchAll  --json --outputFile ./resultz.json -c ./jest.config.js --forceExit",
-    "wit": "concurrently 'npm run dev' 'npm run test'"
+    "wit": "concurrently 'npm run dev' 'npm run test'",
+    "test:run": "jest --json --outputFile ./resultz.json -c ./jest.config.js --forceExit",
+    "sendresults": "node sendTestResults.js"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.11",
@@ -23,6 +25,7 @@
     "vite": "^5.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8"
+    "@babel/core": "^7.17.8",
+    "jest-environment-jsdom": "^29.0.0"
   }
 }
